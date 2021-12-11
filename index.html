@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codecademy</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link data-react-helmet="true" rel="preload"
+        href="https://static-assets.codecademy.com/gamut/apercu-regular-pro.woff" crossorigin="anonymous" as="font"
+        type="font/woff">
+    <link data-react-helmet="true" rel="preload"
+        href="https://static-assets.codecademy.com/gamut/apercu-regular-pro.woff2" crossorigin="anonymous" as="font"
+        type="font/woff2">
+    <link data-react-helmet="true" rel="preload"
+        href="https://static-assets.codecademy.com/gamut/apercu-italic-pro.woff" crossorigin="anonymous" as="font"
+        type="font/woff">
+    <link data-react-helmet="true" rel="preload"
+        href="https://static-assets.codecademy.com/gamut/apercu-italic-pro.woff2" crossorigin="anonymous" as="font"
+        type="font/woff2">
+    <link data-react-helmet="true" rel="preload" href="https://static-assets.codecademy.com/gamut/apercu-bold-pro.woff"
+        crossorigin="anonymous" as="font" type="font/woff">
+    <link data-react-helmet="true" rel="preload" href="https://static-assets.codecademy.com/gamut/apercu-bold-pro.woff2"
+        crossorigin="anonymous" as="font" type="font/woff2">
+    <link data-react-helmet="true" rel="preload"
+        href="https://static-assets.codecademy.com/gamut/SuisseIntlMono-Regular-WebS.woff2" crossorigin="anonymous"
+        as="font" type="font/woff2">
+    <link data-react-helmet="true" rel="preload"
+        href="https://static-assets.codecademy.com/gamut/SuisseIntlMono-Bold-WebS.woff" crossorigin="anonymous"
+        as="font" type="font/woff">
+    <link data-react-helmet="true" rel="preload"
+        href="https://static-assets.codecademy.com/gamut/apercu-bold-italic-pro.woff2" crossorigin="anonymous" as="font"
+        type="font/woff2">
+    <link data-react-helmet="true" rel="preload"
+        href="https://static-assets.codecademy.com/gamut/SuisseIntlMono-Bold-WebS.woff2" crossorigin="anonymous"
+        as="font" type="font/woff2">
+    <link data-react-helmet="true" rel="preload"
+        href="https://static-assets.codecademy.com/gamut/SuisseIntlMono-Regular-WebS.woff" crossorigin="anonymous"
+        as="font" type="font/woff">
+
+<body>
+
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="nav-body">
+                <div class="nav-left">
+                    <a href="https://www.codecademy.com/learn/paths/learn-how-to-build-websites#page-skip-to-content-target">
+                    <svg viewBox="0 0 102 21.705" class="logo">
+                        <title>Codecademy Logo</title>
+                        <g fill="none" fill-rule="nonzero">
+                            <path fill="currentColor"
+                                d="M4.213 14.896c-.192-.562-.278-1.275-.278-2.226 0-.95.086-1.664.278-2.226.513-1.599 1.86-2.485 3.637-2.485 1.326 0 2.353.54 3.06 1.404a.18.18 0 01-.022.26L9.732 10.66c-.086.066-.192.066-.256-.043-.45-.497-.9-.778-1.626-.778-.792 0-1.39.39-1.648 1.167-.128.454-.17.973-.17 1.664 0 .692.042 1.232.192 1.686.257.756.856 1.167 1.647 1.167.727 0 1.198-.28 1.626-.778.064-.086.171-.086.257-.022l1.155 1.038c.086.065.064.173.022.26-.707.842-1.734 1.382-3.06 1.382-1.775-.021-3.145-.886-3.658-2.507zm39.704 0c-.192-.562-.278-1.275-.278-2.226 0-.95.086-1.664.278-2.226.514-1.599 1.862-2.485 3.637-2.485 1.326 0 2.375.54 3.06 1.404a.18.18 0 01-.022.26l-1.155 1.037c-.086.066-.193.066-.257-.043-.45-.497-.899-.778-1.626-.778-.791 0-1.39.39-1.647 1.167-.15.454-.193.973-.193 1.664 0 .692.043 1.232.193 1.686.257.756.856 1.167 1.647 1.167.727 0 1.198-.28 1.626-.778.064-.086.171-.086.257-.022l1.155 1.038c.086.065.064.173.022.26-.707.842-1.734 1.382-3.06 1.382-1.775-.021-3.123-.886-3.637-2.507zm46.552 2.27c-.107 0-.192-.066-.192-.195v-5.187c0-1.167-.578-1.967-1.67-1.967-1.069 0-1.69.8-1.69 1.967v5.187c0 .108-.064.195-.192.195h-1.69c-.107 0-.192-.066-.192-.195v-5.187c0-1.167-.578-1.967-1.67-1.967-1.069 0-1.69.8-1.69 1.967v5.187c0 .108-.063.195-.192.195h-1.69c-.107 0-.192-.066-.192-.195V8.348c0-.108.064-.195.192-.195h1.69c.107 0 .193.065.193.195v.648h.021c.385-.562 1.155-1.037 2.332-1.037 1.048 0 1.883.432 2.418 1.189h.021c.684-.757 1.562-1.19 2.824-1.19 2.054 0 3.209 1.427 3.209 3.35v5.685c0 .108-.064.194-.193.194l-1.647-.021zm4.228 3.177c-.108 0-.193-.066-.193-.195v-1.491c0-.108.064-.194.193-.194h.32c.707 0 1.048-.325 1.327-1.06l.257-.756-3.231-8.494c-.043-.108.043-.194.15-.194h1.818c.107 0 .193.065.214.194l1.99 5.879h.043l1.904-5.879c.043-.108.107-.194.213-.194h1.733c.108 0 .193.065.15.194l-3.337 9.401c-.77 2.14-1.498 2.81-2.974 2.81l-.577-.021zm-76.93-6.009c.15-.475.192-.908.192-1.664 0-.756-.043-1.167-.192-1.664-.257-.757-.835-1.167-1.647-1.167-.813 0-1.412.432-1.669 1.167-.15.475-.193.886-.193 1.664 0 .756.043 1.189.193 1.664.257.757.835 1.167 1.669 1.167.812.022 1.39-.41 1.647-1.167zm-5.306.562c-.192-.627-.3-1.232-.3-2.226s.087-1.578.3-2.226c.492-1.578 1.84-2.485 3.637-2.485 1.776 0 3.124.907 3.615 2.485.193.627.3 1.232.3 2.226s-.086 1.578-.3 2.226c-.491 1.578-1.84 2.485-3.615 2.485-1.775 0-3.123-.907-3.637-2.485zm43.085-6.937c2.695 0 3.68.95 3.722 3.155v5.857c0 .13-.085.195-.192.195h-1.54c-.13 0-.193-.087-.193-.195v-.648h-.022c-.406.605-1.24 1.037-2.481 1.037-1.626 0-2.974-.865-2.974-2.745 0-1.945 1.348-2.853 3.53-2.853h.728c.128 0 .192.087.192.195v1.189c0 .13-.086.194-.192.194h-.407c-1.327 0-1.904.368-1.904 1.21 0 .757.535 1.124 1.519 1.124 1.262 0 1.968-.497 1.968-1.534v-3.004c-.043-.973-.535-1.405-1.968-1.405-.984 0-1.583.281-2.011.627-.086.064-.193.043-.257-.043l-.685-1.233c-.042-.086-.021-.172.043-.237.706-.54 1.67-.886 3.124-.886zm-21.66 3.803h2.502c.065 0 .108-.043.108-.108 0-.302-.043-.54-.108-.756-.235-.735-.877-1.167-1.711-1.167-.834 0-1.498.432-1.733 1.167-.021.087-.043.173-.064.28v.044c-.064.41-.086.735-.107 1.254-.003.434.033.868.107 1.296.021.13.064.26.107.39.278.885.984 1.361 1.968 1.361 1.006 0 1.626-.367 2.075-.864.086-.109.193-.109.278-.044l1.07.973c.086.065.086.173.021.26-.77.907-2.01 1.534-3.636 1.534-1.862 0-3.188-.93-3.68-2.507-.193-.584-.321-1.276-.321-2.205 0-.93.107-1.642.3-2.226.492-1.577 1.86-2.485 3.615-2.485 1.818 0 3.145.95 3.637 2.485.214.627.3 1.254.3 2.702 0 .13-.065.194-.193.194h-4.536c-.064 0-.085-.043-.085-.086v-1.405c0-.065.043-.087.085-.087zm-4.83-7.42c.107 0 .193.064.214.107v12.319c0 .13-.085.195-.192.195h-1.69c-.128 0-.193-.087-.193-.195v-.67h-.021c-.407.605-1.134 1.06-2.332 1.06-1.498 0-2.61-.714-3.06-2.162-.234-.692-.32-1.319-.32-2.529s.107-1.837.32-2.528c.45-1.427 1.52-2.14 2.996-2.161h1.262c.043.02.064.043.064.086v1.707c0 .044-.021.087-.064.087h-.727c-.792.021-1.348.432-1.583 1.167-.129.41-.193.864-.193 1.685 0 .822.064 1.276.193 1.686.235.735.812 1.146 1.625 1.146.835 0 1.412-.39 1.648-1.146a4.85 4.85 0 00.171-1.167V4.536c0-.13.085-.195.192-.195h1.69zm44.176 7.42h2.503c.064 0 .107-.043.107-.108 0-.302-.043-.54-.107-.756-.235-.735-.877-1.167-1.712-1.167-.834 0-1.497.432-1.732 1.167a5.779 5.779 0 00-.064.28v.044c-.064.41-.086.735-.107 1.254-.003.434.033.868.106 1.296.022.13.065.26.108.39.278.885.984 1.361 1.968 1.361 1.006 0 1.626-.367 2.075-.864.086-.109.193-.109.278-.044l1.07.973c.085.065.085.173.021.26-.77.907-2.011 1.534-3.637 1.534-1.86 0-3.187-.93-3.68-2.507-.192-.584-.32-1.276-.32-2.205 0-.93.107-1.642.3-2.226.491-1.577 1.86-2.485 3.614-2.485 1.819 0 3.145.95 3.638 2.485.213.627.3 1.254.3 2.702 0 .13-.065.194-.193.194h-4.536c-.064 0-.086-.043-.086-.086v-1.405c0-.065.043-.087.086-.087zm-4.829-7.42c.107 0 .193.064.236.172v12.319c0 .13-.086.194-.193.194h-1.69c-.128 0-.192-.086-.192-.194v-.67h-.022c-.428.605-1.155 1.059-2.353 1.059-1.498 0-2.61-.713-3.06-2.161-.235-.692-.32-1.34-.32-2.55 0-1.232.107-1.86.32-2.551.45-1.426 1.54-2.14 3.017-2.161h1.24c.129 0 .193.086.193.194v1.492c0 .13-.085.194-.192.194h-.727c-.792.022-1.349.433-1.584 1.167-.128.41-.192.865-.192 1.686s.064 1.275.192 1.686c.235.756.792 1.167 1.626 1.167.835 0 1.412-.41 1.648-1.167.085-.302.15-.649.17-1.167V4.536c0-.13.086-.195.193-.195h1.69zM50.078 19.534c.295 0 .357.09.357.362v1.447c0 .294-.083.362-.357.362h-5.723c-.296 0-.358-.09-.358-.362v-1.447c0-.295.052-.362.358-.362h5.723zM0 .362C0 .109.043.043 0 0h42.208c.23 0 .272.022.358 0v21.344c0 .231-.021.275 0 .362-.086-.022-.129 0-.358 0H0v-.002l.007-.028c.006-.037-.002-.053-.006-.012L0 21.69V.361zm2.146 19.173H40.42c-.043-.043 0-.107 0-.362V2.171H2.146v17.364z">
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                    <ul class="nav-items">
+                        <li class="nav-item" tabindex="0">Catalog</li>
+                        <li class="nav-item">
+                            <div class="nav-item-drop-down" tabindex="0">
+                                <p>Resources</p>
+                                <svg viewBox="0 0 8 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img"
+                                    aria-hidden="true" class="icon__1YrEurPVotn2jhmyx1x7ip gamut-1ed77og-Svg eol2zvm0"
+                                    aria-label="dropdown">
+                                    <title>Arrow Chevron Down Filled Icon</title>
+                                    <path d="M7.066 1.5L4 6.099.934 1.5h6.132z" fill="currentColor"></path>
+                                </svg>
+                            </div>
+                            <div class="dropdown-content">
+                                <p>Challenges</p>
+                                <p>Docs</p>
+                                <p>CheatSheets</p>
+                                <p>Articles</p>
+                                <p>Videos</p>
+                                <p>Blog</p>
+                                <p>Projects</p>
+                                <p>Career Center</p>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item-drop-down" tabindex="0">
+                                <p>Community</p>
+                                <svg viewBox="0 0 8 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img"
+                                        aria-hidden="true" class="icon__1YrEurPVotn2jhmyx1x7ip gamut-1ed77og-Svg eol2zvm0"
+                                        aria-label="dropdown">
+                                        <title>Arrow Chevron Down Filled Icon</title>
+                                        <path d="M7.066 1.5L4 6.099.934 1.5h6.132z" fill="currentColor"></path>
+                                    </svg>
+                            </div>
+                            <div class="dropdown-content">
+                                <p>Forums</p>
+                                <p>Chat</p>
+                                <p>Chapters</p>
+                                <p>Chapters</p>
+                                <p>Events</p>
+                                <p>Learner Stories</p>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item-drop-down" tabindex="0">
+                                <p>Pro Pricing</p>
+                                <svg viewBox="0 0 8 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img"
+                                        aria-hidden="true" class="icon__1YrEurPVotn2jhmyx1x7ip gamut-1ed77og-Svg eol2zvm0"
+                                        aria-label="dropdown">
+                                        <title>Arrow Chevron Down Filled Icon</title>
+                                        <path d="M7.066 1.5L4 6.099.934 1.5h6.132z" fill="currentColor"></path>
+                                    </svg>
+                            </div>
+                            <div class="dropdown-content">
+                                <p>For Individuals</p>
+                                <p>For students</p>
+                            </div>
+                        </li>
+                        <li class="nav-item">For Business</li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <div class="search-icon-div">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" role="img"
+                            aria-hidden="true" class="search-icon">
+                            <title>Search Icon</title>
+                            <circle cx="9.813" cy="9.812" r="9.063" transform="rotate(-23.025 9.813 9.812)" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                            </circle>
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5" d="M16.221 16.22l7.029 7.03"></path>
+                        </svg>
+                    </div>
+                    <button class="btn">Log In</button>
+                    <button class="btn btn-blue">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="container">
+            <div>
+                <svg class="header-background-left" viewBox="0 0 621 422" ><path d="M0 277V0h621c-27.86 17.32-23.39 44.278-51.249 61.6-27.859 17.32-38.784 2.326-66.644 19.649-27.859 17.32-16.934 32.314-44.795 49.635-27.86 17.321-38.785 2.344-66.662 19.666-27.86 17.321-16.916 32.297-44.777 49.618-27.877 17.32-38.803 2.345-66.662 19.666-27.879 17.32-16.936 32.298-44.795 49.619-6.287 3.92-11.741 6.196-16.694 7.547H218c-27.86 17.32-23.39 44.278-51.249 61.6-27.859 17.32-38.784 2.326-66.644 19.649-27.859 17.32-16.934 32.314-44.795 49.635-27.86 17.321-38.785 2.344-66.662 19.666-27.86 17.321-16.916 32.297-44.777 49.618-27.877 17.32-38.803 2.345-66.662 19.666-27.879 17.32-16.936 32.298-44.795 49.619-6.287 3.92-11.741 6.196-16.694 7.547H-185V277H0z" fill="#2d5dcc" fill-rule="evenodd"></path></svg>
+                <img class="header-background-right" src="https://static-assets.codecademy.com/assets/path-marketing-page/hero-assets/5cadfefe5f1de806e9704577.svg" alt="">
+                <div class="header-content">
+                    <div class="header-syllabus">
+                        <div class="header-syllabus-head">
+                            <span>
+                                <svg height="21" viewBox="0 0 95 40" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor" fill-rule="evenodd"><path d="m0 0h74v40h-74zm78 34h17v6h-17z" fill="currentColor"></path><path d="m13.971 23.67v6.82h-3.971v-20.145h6.82c4.749 0 7.253 2.965 7.253 6.62 0 3.625-2.504 6.705-7.253 6.705zm2.245-9.871h-2.245v6.446h2.245c2.187 0 3.77-1.036 3.77-3.28 0-2.245-1.583-3.166-3.77-3.166zm21.518 16.691-4.46-7.741h-2.821v7.741h-4v-20.145h7.568c4.404 0 6.994 2.62 6.994 6.13 0 1.9-.777 4.317-3.828 5.526l5.151 8.49h-4.604zm-.72-13.986c0-1.784-1.295-2.705-3.51-2.705h-3.051v5.468h3.05c2.216 0 3.511-1.036 3.511-2.763zm16.453-6.504c5.843 0 10.533 4.346 10.533 10.418s-4.69 10.417-10.533 10.417c-5.842 0-10.533-4.345-10.533-10.417s4.691-10.418 10.533-10.418zm0 17.152c3.799 0 6.36-2.878 6.36-6.734 0-3.857-2.561-6.734-6.36-6.734s-6.36 2.877-6.36 6.734c0 3.856 2.561 6.734 6.36 6.734z" fill="#fff"></path></g></svg>
+                            </span>
+                            <span>10 weeks</span>
+                        </div>
+                        <div class="header-syllubus-body">
+                            <div class="content">
+                                <h4 class="title">Includes</h4>
+                                <h3 class="lead">
+                                    <em class="includes">HTML</em>, 
+                                    <em class="includes">CSS</em>, 
+                                    <em class="includes">Responsive Design</em>, 
+                                    <em class="includes">Flexbox</em>, 
+                                    <em class="includes">CSS Transitions</em>, 
+                                    <em class="includes">Github Pages</em>, and more...</h3>
+                            </div>
+                            <div class="content">
+                                <h4 class="title">Experience</h4>
+                                <h3 class="lead">Beginners welcome</h3>
+                            </div>
+                            <div class="content">
+                                <h4 class="title">For those who want to</h4>
+                                <ul class="ul">
+                                    <li class="li"><h3 class="lead-li">Get started with coding</h3></li>
+                                    <li class="li"><h3 class="lead-li">Create a personal website</h3></li>
+                                    <li class="li"><h3 class="lead-li">Learn the basics of web dev</h3></li>
+                                </ul>
+                            </div>
+                            <div class="earn">
+                                <h4 class="title">Earn</h4>
+                                <h3 class="lead">Certificate of Completion</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-lead">
+                        <h4 class="title">Skill Path</h4>
+                        <h1 class="lead">Learn how to build websites</h1>
+                        <p class="description">One of the best ways to start coding is by building websites. Whether you want to tweak your business’s site, hone your web development skills, or learn to collaborate with developers, this Skill Path will help you get there.</p>
+                        <p class="pro-desc">To start this skill Path, sign up for Codecademy Pro.</p>
+                        <button class="btn-shadow btn-shadow-yellow"> Try It For Free</button>
+                    </div>
+                    <div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="skills">
+        <div class="container">
+            <svg class="background-right-svg" width="787" height="254"><g fill="#141e3b" fill-rule="evenodd"><path d="M0 0c25.578 15.883 21.474 40.602 47.052 56.484 25.578 15.883 35.609 2.134 61.187 18.019 25.578 15.882 15.547 29.631 41.127 45.514 25.578 15.882 35.609 2.149 61.203 18.033 25.58 15.882 15.531 29.615 41.111 45.497 25.594 15.883 35.625 2.15 61.203 18.033 25.596 15.883 15.55 29.617 41.127 45.5 5.773 3.593 10.78 5.681 15.327 6.92H370V0H0zM370 0h417v254H370z"></path></g></svg>
+            <div class="skills-lead">
+                <h1>What will you be able to do</h1>
+                <h4>Here are just a few things you'll be able to do with this skill</h4>
+            </div>
+            <div class="skills-details">
+                <div class="skills-detail">
+                    <svg width="122" height="114" viewBox="0 0 122 114" role="presentation"><defs><pattern id="b1" width="4" height="4" x="-6" y="2" patternUnits="userSpaceOnUse"><image width="4" height="4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAeSURBVHgBjcoxEQAAAAFAEUxq6J+OBO78/KAcXOYsc5ICqdLdEKMAAAAASUVORK5CYII="></image></pattern></defs><g fill="none" fill-rule="evenodd"><circle fill="url(#b1)" cx="53" cy="61" r="53"></circle><circle fill="#5788fa" cx="69" cy="53" r="53"></circle></g></svg>
+                    <h3>READ AND WRITE CODE</h3>
+                    <h4>Gain a basic understanding of web developement languages by building real sites from scratch</h4>
+                </div>
+                <div class="skills-detail">
+                    <svg width="120" height="104" viewBox="0 0 120 104" role="presentation"><defs><pattern id="b3" width="4" height="4" x="1" y="10" patternUnits="userSpaceOnUse"><image width="4" height="4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAeSURBVHgBjcoxEQAAAAFAEUxq6J+OBO78/KAcXOYsc5ICqdLdEKMAAAAASUVORK5CYII="></image></pattern></defs><g fill-rule="evenodd"><path fill="url(#b3)" transform="rotate(9 111.533 44.633)" d="M60.533 16L113 104H7z"></path><path fill="#5788fa" d="M81.64.374L119.695 95.5 15 78.917z"></path></g></svg>
+                    <h3>CREATE YOUR OWN DESIGN</h3>
+                    <h4>Skip the website builders and design exactly what you want with your own layouts, colors, and even animation.</h4>
+                </div>
+                <div class="skills-detail">
+                    <svg width="121" height="112" viewBox="0 0 121 112" role="presentation"><defs><pattern id="b2" width="4" height="4" x="2" y="10" patternUnits="userSpaceOnUse"><image width="4" height="4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAeSURBVHgBjcoxEQAAAAFAEUxq6J+OBO78/KAcXOYsc5ICqdLdEKMAAAAASUVORK5CYII="></image></pattern></defs><g fill="none" fill-rule="evenodd"><path fill="url(#b2)" transform="rotate(-10 47.596 65.534)" d="M8 16h90v90H8z"></path><path fill="#5788fa" d="M16 15.628L104.633 0l15.628 88.633-88.633 15.628z"></path></g></svg>
+                    <h3>LAUNCH YOUR WEBSITE</h3>
+                    <h4>When it’s time to make your idea real, you’ll be able to launch it online.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects">
+        <h1 class="projects-title">What project you will build</h1>
+        <div class="container">
+            <div class="project">
+                <img src="https://content.codecademy.com/projects/project_thumbnails/web-dev-path/tea-cozy.jpeg" alt="">
+                <div class="project-content">
+                    <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Pro" role="img"><rect width="30" height="16" fill="#10162f"></rect><path d="M5.81612 3.19989C6.81478 3.19989 7.57545 3.47522 8.09812 4.02589C8.62078 4.56722 8.88212 5.28589 8.88212 6.18189C8.88212 7.07789 8.62078 7.80122 8.09812 8.35189C7.57545 8.89322 6.81478 9.16389 5.81612 9.16389H3.94012V12.9999H2.12012V3.19989H5.81612ZM5.74612 7.48389C6.15678 7.48389 6.47412 7.37656 6.69812 7.16189C6.92212 6.94722 7.03412 6.62056 7.03412 6.18189C7.03412 5.74322 6.92212 5.41656 6.69812 5.20189C6.47412 4.98722 6.15678 4.87989 5.74612 4.87989H3.94012V7.48389H5.74612Z" fill="#ffffff"></path><path d="M14.0436 3.19989C14.9956 3.19989 15.7283 3.45656 16.2416 3.96989C16.7643 4.47389 17.0256 5.14589 17.0256 5.98589C17.0256 6.63922 16.867 7.19922 16.5496 7.66589C16.2323 8.12322 15.7796 8.44056 15.1916 8.61789L17.9076 12.9999H15.8776L13.2456 8.77189H12.2936V12.9999H10.4736V3.19989H14.0436ZM14.0576 7.09189C14.4123 7.09189 14.6923 7.00322 14.8976 6.82589C15.103 6.64856 15.2056 6.36856 15.2056 5.98589C15.2056 5.60322 15.103 5.32322 14.8976 5.14589C14.6923 4.96856 14.4123 4.87989 14.0576 4.87989H12.2936V7.09189H14.0576Z" fill="#ffffff"></path><path d="M22.7387 13.1119C21.8894 13.1119 21.1147 12.9252 20.4147 12.5519C19.7147 12.1786 19.1547 11.6186 18.7347 10.8719C18.3241 10.1159 18.1187 9.19189 18.1187 8.09989C18.1187 7.00789 18.3241 6.08856 18.7347 5.34189C19.1547 4.58589 19.7147 4.02122 20.4147 3.64789C21.1147 3.27456 21.8894 3.08789 22.7387 3.08789C23.5881 3.08789 24.3627 3.27456 25.0627 3.64789C25.7627 4.02122 26.3181 4.58589 26.7287 5.34189C27.1487 6.08856 27.3587 7.00789 27.3587 8.09989C27.3587 9.19189 27.1487 10.1159 26.7287 10.8719C26.3181 11.6186 25.7627 12.1786 25.0627 12.5519C24.3627 12.9252 23.5881 13.1119 22.7387 13.1119ZM22.7387 11.4319C23.2521 11.4319 23.7141 11.3152 24.1247 11.0819C24.5447 10.8392 24.8807 10.4706 25.1327 9.97589C25.3847 9.47189 25.5107 8.84656 25.5107 8.09989C25.5107 7.35322 25.3847 6.73256 25.1327 6.23789C24.8807 5.73389 24.5447 5.36522 24.1247 5.13189C23.7141 4.88922 23.2521 4.76789 22.7387 4.76789C22.2254 4.76789 21.7587 4.88922 21.3387 5.13189C20.9281 5.36522 20.5967 5.73389 20.3447 6.23789C20.0927 6.73256 19.9667 7.35322 19.9667 8.09989C19.9667 8.84656 20.0927 9.47189 20.3447 9.97589C20.5967 10.4706 20.9281 10.8392 21.3387 11.0819C21.7587 11.3152 22.2254 11.4319 22.7387 11.4319Z" fill="#ffffff"></path></svg>
+                    <h2>Off-Platform Project: Tea Cozy</h2>
+                    <p>Create a fictional tea store on your computer using image assets and a design spec.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="https://content.codecademy.com/projects/project_thumbnails/web-dev-path/dasmoto.jpeg" alt="">
+                <div class="project-content">
+                    <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Pro" role="img"><rect width="30" height="16" fill="#10162f"></rect><path d="M5.81612 3.19989C6.81478 3.19989 7.57545 3.47522 8.09812 4.02589C8.62078 4.56722 8.88212 5.28589 8.88212 6.18189C8.88212 7.07789 8.62078 7.80122 8.09812 8.35189C7.57545 8.89322 6.81478 9.16389 5.81612 9.16389H3.94012V12.9999H2.12012V3.19989H5.81612ZM5.74612 7.48389C6.15678 7.48389 6.47412 7.37656 6.69812 7.16189C6.92212 6.94722 7.03412 6.62056 7.03412 6.18189C7.03412 5.74322 6.92212 5.41656 6.69812 5.20189C6.47412 4.98722 6.15678 4.87989 5.74612 4.87989H3.94012V7.48389H5.74612Z" fill="#ffffff"></path><path d="M14.0436 3.19989C14.9956 3.19989 15.7283 3.45656 16.2416 3.96989C16.7643 4.47389 17.0256 5.14589 17.0256 5.98589C17.0256 6.63922 16.867 7.19922 16.5496 7.66589C16.2323 8.12322 15.7796 8.44056 15.1916 8.61789L17.9076 12.9999H15.8776L13.2456 8.77189H12.2936V12.9999H10.4736V3.19989H14.0436ZM14.0576 7.09189C14.4123 7.09189 14.6923 7.00322 14.8976 6.82589C15.103 6.64856 15.2056 6.36856 15.2056 5.98589C15.2056 5.60322 15.103 5.32322 14.8976 5.14589C14.6923 4.96856 14.4123 4.87989 14.0576 4.87989H12.2936V7.09189H14.0576Z" fill="#ffffff"></path><path d="M22.7387 13.1119C21.8894 13.1119 21.1147 12.9252 20.4147 12.5519C19.7147 12.1786 19.1547 11.6186 18.7347 10.8719C18.3241 10.1159 18.1187 9.19189 18.1187 8.09989C18.1187 7.00789 18.3241 6.08856 18.7347 5.34189C19.1547 4.58589 19.7147 4.02122 20.4147 3.64789C21.1147 3.27456 21.8894 3.08789 22.7387 3.08789C23.5881 3.08789 24.3627 3.27456 25.0627 3.64789C25.7627 4.02122 26.3181 4.58589 26.7287 5.34189C27.1487 6.08856 27.3587 7.00789 27.3587 8.09989C27.3587 9.19189 27.1487 10.1159 26.7287 10.8719C26.3181 11.6186 25.7627 12.1786 25.0627 12.5519C24.3627 12.9252 23.5881 13.1119 22.7387 13.1119ZM22.7387 11.4319C23.2521 11.4319 23.7141 11.3152 24.1247 11.0819C24.5447 10.8392 24.8807 10.4706 25.1327 9.97589C25.3847 9.47189 25.5107 8.84656 25.5107 8.09989C25.5107 7.35322 25.3847 6.73256 25.1327 6.23789C24.8807 5.73389 24.5447 5.36522 24.1247 5.13189C23.7141 4.88922 23.2521 4.76789 22.7387 4.76789C22.2254 4.76789 21.7587 4.88922 21.3387 5.13189C20.9281 5.36522 20.5967 5.73389 20.3447 6.23789C20.0927 6.73256 19.9667 7.35322 19.9667 8.09989C19.9667 8.84656 20.0927 9.47189 20.3447 9.97589C20.5967 10.4706 20.9281 10.8392 21.3387 11.0819C21.7587 11.3152 22.2254 11.4319 22.7387 11.4319Z" fill="#ffffff"></path></svg>
+                    <h2>Off-Platform Project: Dasmoto's Arts & Crafts</h2>
+                    <p>In this project, you'll build a simple website for a fictional arts and crafts store using the tools on your own computer.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="https://content.codecademy.com/projects/project_thumbnails/learn-how-to-build-websites/colmar_academy_thumbnail.jpg" alt="">
+                <div class="project-content">
+                    <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Pro" role="img"><rect width="30" height="16" fill="#10162f"></rect><path d="M5.81612 3.19989C6.81478 3.19989 7.57545 3.47522 8.09812 4.02589C8.62078 4.56722 8.88212 5.28589 8.88212 6.18189C8.88212 7.07789 8.62078 7.80122 8.09812 8.35189C7.57545 8.89322 6.81478 9.16389 5.81612 9.16389H3.94012V12.9999H2.12012V3.19989H5.81612ZM5.74612 7.48389C6.15678 7.48389 6.47412 7.37656 6.69812 7.16189C6.92212 6.94722 7.03412 6.62056 7.03412 6.18189C7.03412 5.74322 6.92212 5.41656 6.69812 5.20189C6.47412 4.98722 6.15678 4.87989 5.74612 4.87989H3.94012V7.48389H5.74612Z" fill="#ffffff"></path><path d="M14.0436 3.19989C14.9956 3.19989 15.7283 3.45656 16.2416 3.96989C16.7643 4.47389 17.0256 5.14589 17.0256 5.98589C17.0256 6.63922 16.867 7.19922 16.5496 7.66589C16.2323 8.12322 15.7796 8.44056 15.1916 8.61789L17.9076 12.9999H15.8776L13.2456 8.77189H12.2936V12.9999H10.4736V3.19989H14.0436ZM14.0576 7.09189C14.4123 7.09189 14.6923 7.00322 14.8976 6.82589C15.103 6.64856 15.2056 6.36856 15.2056 5.98589C15.2056 5.60322 15.103 5.32322 14.8976 5.14589C14.6923 4.96856 14.4123 4.87989 14.0576 4.87989H12.2936V7.09189H14.0576Z" fill="#ffffff"></path><path d="M22.7387 13.1119C21.8894 13.1119 21.1147 12.9252 20.4147 12.5519C19.7147 12.1786 19.1547 11.6186 18.7347 10.8719C18.3241 10.1159 18.1187 9.19189 18.1187 8.09989C18.1187 7.00789 18.3241 6.08856 18.7347 5.34189C19.1547 4.58589 19.7147 4.02122 20.4147 3.64789C21.1147 3.27456 21.8894 3.08789 22.7387 3.08789C23.5881 3.08789 24.3627 3.27456 25.0627 3.64789C25.7627 4.02122 26.3181 4.58589 26.7287 5.34189C27.1487 6.08856 27.3587 7.00789 27.3587 8.09989C27.3587 9.19189 27.1487 10.1159 26.7287 10.8719C26.3181 11.6186 25.7627 12.1786 25.0627 12.5519C24.3627 12.9252 23.5881 13.1119 22.7387 13.1119ZM22.7387 11.4319C23.2521 11.4319 23.7141 11.3152 24.1247 11.0819C24.5447 10.8392 24.8807 10.4706 25.1327 9.97589C25.3847 9.47189 25.5107 8.84656 25.5107 8.09989C25.5107 7.35322 25.3847 6.73256 25.1327 6.23789C24.8807 5.73389 24.5447 5.36522 24.1247 5.13189C23.7141 4.88922 23.2521 4.76789 22.7387 4.76789C22.2254 4.76789 21.7587 4.88922 21.3387 5.13189C20.9281 5.36522 20.5967 5.73389 20.3447 6.23789C20.0927 6.73256 19.9667 7.35322 19.9667 8.09989C19.9667 8.84656 20.0927 9.47189 20.3447 9.97589C20.5967 10.4706 20.9281 10.8392 21.3387 11.0819C21.7587 11.3152 22.2254 11.4319 22.7387 11.4319Z" fill="#ffffff"></path></svg>
+                    <h2>Colmar Academy</h2>
+                    <p>Build Colmar Academy's responsive site from scratch, making typographic and color design choices on your own.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="syllabus">
+        <div class="container syllabus-container">
+            <div>
+                <h1 class="syllubus-title"> What will you learn?</h1>
+                <div class="syllabus-lead">
+                    <div class="syllabus-item">
+                        <h1>1</h1>
+                        <div class="syllabus-item-lead">
+                            <h1>Beginner HTML</h1>
+                            <p>In thia unit, you will learn the basics of HTML. HTML is a language that provides structure to website content.</p>
+                        </div>
+                    </div>
+                    <div class="syllabus-item">
+                        <h1>2</h1>
+                        <div class="syllabus-item-lead">
+                            <h1>Beginner CSS</h1>
+                            <p>This unit provides an overview of CSS, the language used to give websites style.</p>
+                        </div>
+                    </div>
+                    <div class="syllabus-item">
+                        <h1>3</h1>
+                        <div class="syllabus-item-lead">
+                            <h1>How to Build Websites on Your Own Computer</h1>
+                            <p>Get setup to build websites on your own computer!</p>
+                        </div>
+                    </div>
+                    <div class="syllabus-item more-lessons">
+                        <h1></h1>
+                        <div class="syllabus-item-lead">
+                            <h1></h1>
+                            <p>+6 more lessons!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="try-it-for-free">
+                <button class="btn btn-shadow btn-shadow-purple"> Try It For Free</button>
+            </div>
+        </div>
+    </section>
+    <!-- <button class="btn">Try It For Free</button> -->
+    <section class="appriciation">
+        <div class="container appriciation-container">
+            <div class="appriciation-content">
+                <div class="appriciation-comment">
+                    <h1>You really feel like there's nothing you can't learn, which in turn builds so much confidence in your skills and gives the momentum to keep learning.</h1>
+                    <h3>Saiteja</h3>
+                    <p>While Cloning Codecademy</p>
+                </div>
+                <div class="appriciation-lead">
+                    <h1 class="appriciation-lead-title">How are Skill Paths different?</h1>
+                    <h2 class="appriciation-heading">Get a specialized skill.</h2>
+                    <p class="appriciation-para">Want to level up at work? Gain a practical, real-world skill that you can use right away to stand out at your job.</p>
+                    <h2 class="appriciation-heading">Get step-by-step guidence.</h2>
+                    <p class="appriciation-para">We guide you through exactly where to start and what to learn next to build a new skill.</p>
+                    <h2 class="appriciation-heading">Get there quickly.</h2>
+                    <p class="appriciation-para">We’ve hand-picked the content in each Skill Path to fast-track your journey and help you gain a new skill in just a few months.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pro">
+        <div class="container pro-container">
+            <div class="pro-content">
+                <div class="pro-content-lead">
+                    <h1>Codecademy Pro</h1>
+                    <p>To get Skill Paths, sign up for Codecademy Pro. With Pro, you’ll have unlimited access to everything you need to take your learning to the next level.</p>
+                    <button class="btn btn-border">Learn More</button>
+                </div>
+                <img src="https://www.codecademy.com/webpack/44203f7cc2d35186e8c12394c68d7dbf.png" alt="">
+            </div>
+        </div>
+    </section>
+    <footer class="footer"> 
+        <div class="container footer-container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div>
+                        <p class="title">COMPANY</p>
+                        <p class="mb-1">About</p>
+                        <p class="mb-1">Careers</p>
+                        <p class="mb-1">Affliates</p>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" role="img" aria-hidden="true" class="social-media-icon"><title>Twitter Icon</title><path fill="currentColor" d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.8-2.7-.2-5.2-1.5-6.8-3.5-.3.5-.4 1.1-.4 1.6 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4 0 1.6 1.1 2.9 2.6 3.2-.3.2-.6.2-.9.2-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" role="img" aria-hidden="true" class="social-media-icon"><title>Facebook Icon</title><path fill="currentColor" d="M6.1 16V8.5h-2V5.8h2V3.5C6.1 1.7 7.3 0 10 0c1.1 0 1.9.1 1.9.1l-.1 2.5h-1.7C9.1 2.6 9 3 9 3.8v2h2.9l-.1 2.7H8.9V16H6.1z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" role="img" aria-hidden="true" class="social-media-icon"><title>Instagram Icon</title><path fill="currentColor" d="M14 16H2c-1.1 0-2-.9-2-2V2C0 .9.9 0 2 0h12c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2zM8 4.9c-1.2 0-2.3.7-2.8 1.8 0 .1-.1.1-.1.2V7c-.1.1-.1.2-.1.2v.7C5 9.6 6.4 11 8.1 11s3.1-1.4 3.1-3.1v-.7s0-.1-.1-.2v-.1c0-.1-.1-.1-.1-.2-.7-1.1-1.8-1.8-3-1.8zm6.2-2.3c0-.4-.4-.8-.8-.8h-1.6c-.4 0-.8.4-.8.8v1.6c0 .4.4.8.8.8h1.6c.4 0 .8-.4.8-.8V2.6zm0 4.1h-1.5c.1.4.2.8.2 1.3 0 2.7-2.2 4.9-4.9 4.9S3.1 10.7 3.1 8c0-.5.1-.9.2-1.3H1.8v6.7c0 .4.4.8.8.8h10.8c.4 0 .8-.4.8-.8V6.7z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" role="img" aria-hidden="true" class="social-media-icon"><title>Youtube Icon</title><path d="M5.9 5.12v4.26a.75.75 0 001.5 0V5.12l2.85-3.8A.75.75 0 109 .42l-2.4 3.2L4.25.42a.75.75 0 10-1.2.9zm3.55-.24v3a2.25 2.25 0 004.5 0v-3a2.25 2.25 0 10-4.5 0zm1.5 0a.75.75 0 111.5 0v3a.75.75 0 01-1.5 0zm4.86 4.44a2.73 2.73 0 001.94.8 2.72 2.72 0 001.36-.38.74.74 0 00.64.38.75.75 0 00.75-.75v-6a.75.75 0 00-1.5 0v4a1.25 1.25 0 01-1.25 1.25 1.25 1.25 0 01-1.25-1.25v-4a.75.75 0 10-1.5 0v4a2.73 2.73 0 00.81 1.95zm2.69 8.05a.5.5 0 00-1 0v.5h1zm-4.5-.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5z"></path><path d="M19 11.87H5a4.5 4.5 0 00-4.5 4.5v3a4.5 4.5 0 004.5 4.5h14a4.5 4.5 0 004.5-4.5v-3a4.5 4.5 0 00-4.5-4.5zm-11 4H6.5v4.48a.5.5 0 01-1 0v-4.48H4a.5.5 0 010-1h4a.5.5 0 110 1zm3.48 3.5v1a.5.5 0 01-.86.35 1.48 1.48 0 01-.64.15 1.5 1.5 0 01-1.5-1.5v-3a.5.5 0 011 0v3a.5.5 0 001 0v-3a.5.5 0 011 0zm4 0a1.5 1.5 0 01-1.5 1.5 1.48 1.48 0 01-.66-.16.5.5 0 01-.84-.36v-6a.5.5 0 011 0V16a1.48 1.48 0 01.5-.09 1.5 1.5 0 011.5 1.5zm2.59 1.5a1.69 1.69 0 01-1.59-1.62v-1.88a1.5 1.5 0 013 0v1a.5.5 0 01-.5.5H17.5v.38a.7.7 0 00.59.62c.23 0 .59-.1.59-.37a.5.5 0 011 0 1.46 1.46 0 01-1.59 1.37z"></path></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">RESOURCES</p>
+                        <p class="mb-1">Challenges</p>
+                        <p class="mb-1">Docs</p>
+                        <p class="mb-1">Cheatsheets</p>
+                        <p class="mb-1">Articles</p>
+                        <p class="mb-1">Videos</p>
+                        <p class="mb-1">Blog</p>
+                        <p class="mb-1">Projects</p>
+                        <p class="mb-1">Career Center</p>
+                    </div>
+                    <div>
+                        <p class="title">COMMUNITY</p>
+                        <p class="mb-1">Forums</p>
+                        <p class="mb-1">Chapters</p>
+                        <p class="mb-1">Events</p>
+                        <p class="mb-1">Learner Stories</p>
+                    </div>
+                    <div>
+                        <p class="title">MOBILE</p>
+                        <img alt="Download on the App Store" height="calc(40px + 1rem)" src="	https://www.codecademy.com/webpack/88f2b695da0acbecad60ed9ea386b6b5.svg" width="calc(120px + 1.5rem)">
+                        <img alt="Get it on Google Play" height="calc(40px + 1rem)" src="https://www.codecademy.com/webpack/c2cb3310b4be600e8b5974fb025e84f1.png" width="calc(133px + 1.5rem)">
+                    </div>
+                    <div>
+                        <p class="title">INDIVIDUAL PLANS</p>
+                        <p class="mb-1">Pro Membership</p>
+                        <p class="mb-1">For Student</p>
+
+                    </div>
+                    <div>
+                        <p class="title">ENTERPRISE PLANS</p>
+                        <p class="mb-1">For Buisiness</p>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <p class="title">COURSE CATELOG</p>
+                    <div class="footer-right-content">
+                        <div class="subjects">
+                            <h5 class="title">Subjects</h5>
+                            <p class="mb-1">Web Developement</p>
+                            <p class="mb-1">Data Science</p>
+                            <p class="mb-1">Computer Science</p>
+                            <p class="mb-1">Developer Tools</p>
+                            <p class="mb-1">Machine learning</p>
+                            <p class="mb-1">Code Foundations</p>
+                            <p class="mb-1">Web Design</p>
+                            <p class="mb-1">-</p>
+                            <p class="mb-1">Full Catalog</p>
+                            <p class="mb-1">Beta Content</p>
+                            <p class="mb-1">Roadmap</p>
+                        </div>
+                        <div>
+                            <h5 class="title">Languages</h5>
+                            <div class="languages">
+
+                                <p class="mb-1">HTML & CSS</p>
+                                <p class="mb-1">Python</p>
+                                <p class="mb-1">JavasScript</p>
+                                <p class="mb-1">Java</p>
+                                <p class="mb-1">SQL</p>
+                                <p class="mb-1">Bash/Shell</p>
+                                <p class="mb-1">Ruby</p>
+                                <p class="mb-1">C++</p>
+                                <p class="mb-1">R</p>
+                                <p class="mb-1">C#</p>
+                                <p class="mb-1">PHP</p>
+                                <p class="mb-1">Go</p>
+                                <p class="mb-1">Swift</p>
+                                <p class="mb-1">Kotlin</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="footer-terms">
+                <div class="footer-terms-content">
+                    <div class="terms-lead">
+                        <p>Privacy Policy</p>
+                        <p>Cookie Policy</p>
+                        <p>Do Not Sell My Personal Information</p>
+                        <p>Terms</p>
+                    </div>
+                    <div>
+                        <p>Made with ️❤️ by Saiteja Bandari</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
